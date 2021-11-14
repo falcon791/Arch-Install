@@ -47,8 +47,10 @@ echo Archlinux > /etc/hostname
 pacman -S networkmanager dhclient --noconfirm --needed
 systemctl enable NetworkManager
 
-# Set Root Password
+# Set Root Password and accounts
 passwd
+useradd -m rowan
+passwd rowan
 
 # Install GRUB
 pacman -S grub efibootmgr
